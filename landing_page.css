@@ -28,6 +28,12 @@ span {
     color: #e69b1a;
 }
 
+.contact {
+    font-size: initial;
+    color: white;
+    background: #0000004e;
+}
+
 hr {
     opacity: 0;
     padding: 0;
@@ -68,13 +74,14 @@ hr {
 }
 
 .navbar ul {
+    position: relative;
     display: flex;
     list-style: none;
+    left: 800px;
 }
 
 .navbar ul li {
     margin: 15px;
-    right: 20px;
 }
 
 .navbar ul li a {
@@ -391,14 +398,19 @@ footer {
         left: 110px;
         top: 5px;
     }
+    .header-main {
+        background-size: cover;
+    }
     .titles {
-        font-size: 20px;
+        font-size: 35px;
         top: -10px;
-        left: 120px;
+        left: 150px;
         text-align: center;
     }
     .h2color {
-        font-size: 20px;
+        font-size: 35px;
+        top: -30px;
+        left: 160px;
     }
     .container {
         margin-top: 0;
