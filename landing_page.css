@@ -5,7 +5,8 @@ body {
     font-family: fantasy;
     overflow-x: hidden;
     box-sizing: border-box;
-    background-color: #e69b1a;
+    background-color: rgb(35, 34, 34);
+    ;
 }
 
 
@@ -14,7 +15,7 @@ body {
 .header-main {
     height: 100vh;
     width: 100vw;
-    background-image: url(./landing_page_image/pepson.jpg);
+    background-image: url(./landing_page_image/FUNDO\ DO\ SITE.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -23,10 +24,87 @@ body {
     align-items: center;
 }
 
+
+/* Estilizando o slide-show */
+
+.content {
+    position: absolute;
+    left: 20px;
+    top: 120px;
+    height: 700px;
+    width: 900px;
+    overflow: hidden;
+}
+
+.content .imge img {
+    width: 100%;
+    height: 100%;
+}
+
+.sliders {
+    display: flex;
+    width: 700%;
+    height: 50%;
+}
+
+.image {
+    width: 16.66%;
+    transition: .5s;
+}
+
+.btns {
+    position: absolute;
+    display: flex;
+    top: 500px;
+    left: 100px;
+    display: none;
+}
+
+.nav {
+    border: 2px solid white;
+    margin: 10px;
+    height: 15px;
+    width: 50px;
+    border-radius: 4pt;
+    cursor: pointer;
+}
+
+.nav:hover {
+    background: white;
+    transition: .5s;
+}
+
+#btn1:checked~.p1 {
+    margin-left: 1%;
+}
+
+#btn2:checked~.p1 {
+    margin-left: -14%;
+}
+
+#btn3:checked~.p1 {
+    margin-left: -31.5%;
+}
+
+#btn4:checked~.p1 {
+    margin-left: -49%;
+}
+
+#btn5:checked~.p1 {
+    margin-left: -65.3%;
+}
+
+#btn6:checked~.p1 {
+    margin-left: -82%;
+}
+
 span {
     font-size: 110px;
     color: #e69b1a;
 }
+
+
+/* estlizando meu imail para contato */
 
 .contact {
     font-size: initial;
@@ -34,11 +112,17 @@ span {
     background: #0000004e;
 }
 
+
+/* stilizaando a linha */
+
 hr {
     opacity: 0;
     padding: 0;
     margin: 0;
 }
+
+
+/* estilizando os titulos principais */
 
 .titles {
     position: relative;
@@ -62,10 +146,12 @@ hr {
 /* Menu navbar */
 
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #6e6f6e22;
+    position: relative;
+    display: flex;
+    list-style: none;
+    background-color: rgba(2, 7, 46, 0.162);
+    border-bottom: 1px solid rgb(250, 184, 2);
+    height: 100px;
     width: 100%;
     box-shadow: 1px 2px 3px 0px rgb(10, 10, 10);
     font-size: 20px;
@@ -73,25 +159,28 @@ hr {
     text-transform: uppercase;
 }
 
-.navbar ul {
+.navbar a {
     position: relative;
-    display: flex;
-    list-style: none;
-    left: 800px;
-}
-
-.navbar ul li {
+    top: 38px;
+    left: 850px;
+    text-decoration: none;
+    color: white;
     margin: 15px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-.navbar ul li a:hover {
+.navbar a:hover {
     color: rgb(9, 244, 225);
     transition: 0.6s ease-in-out;
+}
+
+.navbar img {
+    position: absolute;
+    border: 4px solid rgb(247, 175, 6);
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    top: 10px;
+    left: 30px;
 }
 
 
@@ -137,22 +226,26 @@ input {
 }
 
 .card {
+    position: relative;
     height: 300px;
     width: 400px;
     margin: 3rem 0 0;
-    background-image: url(./landing_page_image/avenue-g46d285c0f_1920.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     filter: grayscale(0.5);
-    color: #fff;
+    color: #000;
     cursor: pointer;
     transition: 0.3s;
     border: 1px solid black;
     border-radius: 8pt;
+}
+
+.container .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 7pt;
 }
 
 .card-wrapper {
@@ -209,42 +302,18 @@ input {
     visibility: visible;
 }
 
-.img1 {
-    position: absolute;
-    left: 180px;
-    top: 310px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 2px 1px black;
+footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 34, 34);
+    margin-top: 50px;
 }
 
-.img2 {
-    position: absolute;
-    right: 180px;
-    top: 662px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 2px 1px black;
-}
-
-.img3 {
-    position: relative;
-    left: -180px;
-    top: -37px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 2px 1px black;
-}
-
-.creditos2 {
-    text-decoration: none;
-    color: #00ffff;
-}
-
-.creditos2:hover {
-    color: #8a2be2;
-    text-decoration: underline;
-    transition: 0.8s;
+footer p {
+    color: darkorange;
 }
 
 @keyframes mainTransition {
@@ -257,16 +326,6 @@ input {
     100% {
         background-position: 100% 0%;
     }
-}
-
-footer {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e69b1a;
-    border-top: 1px solid #00000044;
 }
 
 
