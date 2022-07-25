@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+@import url('./landing_page_fonts/RobotoSlab-Thin.ttf');
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +6,6 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
     background-color: rgb(35, 34, 34);
-    ;
 }
 
 
@@ -15,7 +14,7 @@ body {
 .header-main {
     height: 100vh;
     width: 100vw;
-    background-image: url(./landing_page_image/FUNDO\ DO\ SITE.jpg);
+    background-image: url('./landing_page_image/FUNDO\ DO\ SITE.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -131,38 +130,47 @@ hr {
     letter-spacing: 1px;
     color: #ffffff;
     text-shadow: 2px 3px black;
-    font-size: 70px;
-    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    font-family: 'RobotoSlab-Thin';
 }
 
 .h2color {
     color: #00fda9;
     text-shadow: 1px 2px black;
-    font-size: 80px;
-    top: -20px;
+    font-size: 50px;
+    top: 15px;
 }
 
 
 /* Menu navbar */
 
 .navbar {
-    position: relative;
+    position: absolute;
     display: flex;
     list-style: none;
     background-color: rgba(2, 7, 46, 0.162);
     border-bottom: 1px solid rgb(250, 184, 2);
-    height: 100px;
+    right: 0;
+    top: 0;
+    height: 15vh;
     width: 100%;
-    box-shadow: 1px 2px 3px 0px rgb(10, 10, 10);
+    margin-left: 0;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+.navbar p{
+    color: #12ebce;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
 .navbar a {
     position: relative;
     top: 38px;
-    left: 850px;
+    left: 350px;
     text-decoration: none;
     color: white;
     margin: 15px;
@@ -173,15 +181,6 @@ hr {
     transition: 0.6s ease-in-out;
 }
 
-.navbar img {
-    position: absolute;
-    border: 4px solid rgb(247, 175, 6);
-    border-radius: 100%;
-    height: 70px;
-    width: 70px;
-    top: 10px;
-    left: 30px;
-}
 
 
 /*Menu Sanduba*/
@@ -194,6 +193,72 @@ input {
     display: none;
 }
 
+/* Conteúdo da section sobre mim */
+
+.sobre{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: #17161a;
+    
+}
+
+.box-sobre{
+    position: relative;
+    font-size: 20px;
+    width: 50%;
+    height: 320px;
+    top: 120px;
+    left: 100px;
+    display: block;
+    justify-content:center;
+    align-items: center;
+    color: #fff;
+    text-align: justify;
+    background-color: #0000007f;
+    box-shadow: 2px 2px 3px 1px #000;
+    border-radius: 8pt;
+
+}
+
+.box-sobre p, h3{
+    position: relative;
+    left: 30px;
+    width: 90%;
+    top: 10px;
+}
+
+.box-sobre h3{
+    font-size: 30px;
+    
+}
+
+.pro{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #103140;
+}
+
+.card-project{
+    position: relative;
+    display: inline;
+    margin: 10px;
+    margin-left: 60px;
+    top: 50px;
+    
+    
+    
+}
+
+.card-project a{
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    padding: 0 10px;
+    background: #000;
+    border-radius: 8pt;
+}
 
 /* Conteúdo do main */
 
@@ -308,7 +373,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(35, 34, 34);
+    background-color: #232222;
     margin-top: 50px;
 }
 
@@ -465,6 +530,7 @@ footer p {
         top: -10px;
         left: 150px;
         text-align: center;
+        display: none;
     }
     .h2color {
         font-size: 35px;
@@ -493,4 +559,35 @@ footer p {
     .p {
         display: none;
     }
+
+    .box-sobre{
+        position: relative;
+        width: 550px;
+        height: 380px;
+        left: 15px;
+        top: 15px
+        
+    }
+    .text-sobre{
+        position: absolute;
+        display: flex;
+        justify-items: center;
+        margin-left: -10px;
+        margin-top: -30px;
+        font-size: 19px;
+    }
+
+    .title-sobre{
+        top: -10px;
+        margin-left: -10px;
+    }
+
+    .photo-sobre img{
+        width: 100%;
+        margin-left: 30px;
+        
+        
+    }
+
+   
 }
